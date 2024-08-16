@@ -1,0 +1,11 @@
+services:
+  mf_nut_runner_app:
+    image: mf-nut-runner-app:local
+    container_name: mf-nut-runner-app
+    build:
+      context: ./../../../
+      dockerfile: .docker/file/local/Dockerfile
+    ports:
+      - "${DOCKER_INFERENCE_BIND_PORT}:${DOCKER_INFERENCE_CONTAINER_PORT}"
+    volumes:
+      - ./../../..:/apps
