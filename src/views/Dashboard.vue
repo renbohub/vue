@@ -1,71 +1,396 @@
 <template>
-  <!-- <h6>Dashboard</h6> -->
-  <div>
-  <CAlert color="primary"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert>
-  <!-- <CAlert color="secondary"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert> -->
-  <!-- <CAlert color="success"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert>
-  <CAlert color="danger"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert>
-  <CAlert color="warning"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert>
-  <CAlert color="info"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert>
-  <CAlert color="light"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert>
-  <CAlert color="dark"><h4>Welcome</h4> to Manufacturing Connectivity Platform</CAlert> -->
-  
-  <CCard>
-  <CCardBody>
-    This is some text within a card body.
-  </CCardBody>
-</CCard>
-    
-  </div>
+  <CRow>
+    <CCol :xs="12" :md="6" :lg="4">
+      <CCard>
+        <CHeader>
+          IMAM-06
+        </CHeader>
+        <CBody>
+          <CRow>
+            <CCol class="pt-4" :xs="8">
+              <center>
+                <CChartDoughnut :data="defaultData" :options="defaultOptions" style="height: 200px;" />
+              </center>
+            </CCol>
+            <CCol class="py-0" :xs="4">
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol :xs="12">
+              <CCard class="py-2">
+                <CBody class="text-start px-2">
+                  <CRow>
+                    <CCol :xs="4">Model Name</CCol>
+                    <CCol :xs="1">:</CCol>
+                    <CCol :xs="7"></CCol>
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol :xs="12">
+              <CCard class="py-2">
+                <CBody class="text-start px-2">
+                  <CRow>
+                    <CCol :xs="4">Engine Number</CCol>
+                    <CCol :xs="1">:</CCol>
+                    <CCol :xs="7"></CCol>
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="pe-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #1
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="ps-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #2
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="pe-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #3
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="ps-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #3
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+          </CRow>
+        </CBody>
+      </CCard>
+    </CCol>
+    <CCol :xs="12" :md="6" :lg="4">
+      <CCard>
+        <CHeader>
+          IMAM-06
+        </CHeader>
+        <CBody>
+          <CRow>
+            <CCol class="pt-4" :xs="8">
+              <center>
+                <CChartDoughnut :data="defaultData" :options="defaultOptions" style="height: 200px;" />
+              </center>
+            </CCol>
+            <CCol class="py-0" :xs="4">
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol :xs="12">
+              <CCard class="py-2">
+                <CBody class="text-start px-2">
+                  <CRow>
+                    <CCol :xs="4">Model Name</CCol>
+                    <CCol :xs="1">:</CCol>
+                    <CCol :xs="7"></CCol>
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol :xs="12">
+              <CCard class="py-2">
+                <CBody class="text-start px-2">
+                  <CRow>
+                    <CCol :xs="4">Engine Number</CCol>
+                    <CCol :xs="1">:</CCol>
+                    <CCol :xs="7"></CCol>
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="pe-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #1
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="ps-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #2
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="pe-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #3
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="ps-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #3
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+          </CRow>
+        </CBody>
+
+      </CCard>
+    </CCol>
+    <CCol :xs="12" :md="6" :lg="4">
+      <CCard>
+        <CHeader>
+          IMAM-06
+        </CHeader>
+        <CBody>
+          <CRow>
+            <CCol class="pt-4" :xs="8">
+              <center>
+                <CChartDoughnut :data="defaultData" :options="defaultOptions" style="height: 200px;" />
+              </center>
+            </CCol>
+            <CCol class="py-0" :xs="4">
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+              <CCard>
+                <CFooter>
+                  Total Ok
+                </CFooter>
+                <CBody class="text-end px-2">
+                  <h3>0 Pcs</h3>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol :xs="12">
+              <CCard class="py-2">
+                <CBody class="text-start px-2">
+                  <CRow>
+                    <CCol :xs="4">Model Name</CCol>
+                    <CCol :xs="1">:</CCol>
+                    <CCol :xs="7"></CCol>
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol :xs="12">
+              <CCard class="py-2">
+                <CBody class="text-start px-2">
+                  <CRow>
+                    <CCol :xs="4">Engine Number</CCol>
+                    <CCol :xs="1">:</CCol>
+                    <CCol :xs="7"></CCol>
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="pe-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #1
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="ps-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #2
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="pe-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #3
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+            <CCol class="ps-0" :xs="12" :md="6">
+              <CCard class="py-0">
+                <CFooter>
+                  Spindel #3
+                </CFooter>
+                <CBody>
+                  <CRow>
+                    <CChartLine :data="defaultData1" />
+                  </CRow>
+                </CBody>
+              </CCard>
+            </CCol>
+          </CRow>
+        </CBody>
+      </CCard>
+    </CCol>
+  </CRow>
 </template>
 
 <script>
-import MainChartExample from './charts/MainChartExample'
-import WidgetsStatsA from './widgets/WidgetsStatsTypeA.vue'
-import WidgetsStatsD from './widgets/WidgetsStatsTypeD.vue'
-
+import { CChartDoughnut, CChartLine } from '@coreui/vue-chartjs';
 export default {
   name: 'Dashboard',
   components: {
-    MainChartExample,
-    WidgetsStatsA,
-    WidgetsStatsD,
+    CChartDoughnut,
+    CChartLine,
   },
-  setup() {
-    const progressGroupExample1 = [
-      { title: 'Monday', value1: 34, value2: 78 },
-      { title: 'Tuesday', value1: 56, value2: 94 },
-      { title: 'Wednesday', value1: 12, value2: 67 },
-      { title: 'Thursday', value1: 43, value2: 91 },
-      { title: 'Friday', value1: 22, value2: 73 },
-      { title: 'Saturday', value1: 53, value2: 82 },
-      { title: 'Sunday', value1: 9, value2: 69 },
-    ]
-    const progressGroupExample2 = [
-      { title: 'Male', icon: 'cil-user', value: 53 },
-      { title: 'Female', icon: 'cil-user-female', value: 43 },
-    ]
-    const progressGroupExample3 = [
-      {
-        title: 'Organic Search',
-        icon: 'cib-google',
-        percent: 56,
-        value: '191,235',
-      },
-      { title: 'Facebook', icon: 'cib-facebook', percent: 15, value: '51,223' },
-      { title: 'Twitter', icon: 'cib-twitter', percent: 11, value: '37,564' },
-      { title: 'LinkedIn', icon: 'cib-linkedin', percent: 8, value: '27,319' },
-    ]
-    const tableExample = [
-      
-    ]
-
-    return {
-      tableExample,
-      progressGroupExample1,
-      progressGroupExample2,
-      progressGroupExample3,
-    }
+  computed: {
+    // Doughnut Chart Data
+    defaultData() {
+      return {
+        labels: ['VueJs', 'EmberJs'],
+        datasets: [
+          {
+            backgroundColor: ['#41B883', '#E46651'],
+            data: [40, 20],
+          },
+        ],
+      };
+    },
+    // Doughnut Chart Options
+    defaultOptions() {
+      return {
+        plugins: {
+          legend: {
+            display: false, // Disable the legend
+          },
+        },
+        responsive: true, // Make chart responsive
+        maintainAspectRatio: false, // Ensure the chart uses the available space
+      };
+    },
+    // Line Chart Data
+    defaultData1() {
+      return {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: 'rgba(228,102,81,0.9)',
+            data: [30, 39, 10, 50, 30, 70, 35],
+          },
+          {
+            label: 'Data Two',
+            backgroundColor: 'rgba(0,216,255,0.9)',
+            data: [39, 80, 40, 35, 40, 20, 45],
+          },
+        ],
+      };
+    },
   },
-}
+};
 </script>

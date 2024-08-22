@@ -66,6 +66,7 @@ export default {
   data() {
     return {
       nav: [
+        
         {
           component: 'CNavItem',
           name: 'Home',
@@ -73,120 +74,13 @@ export default {
           icon: 'cilHome',
           parentId: 'ROOT',
         },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/quality-operational',
-        //   name: 'Quality Operational',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/gauge-control',
-        //   name: 'Gauge Control',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/gauge-control/detail/:id',
-        //   name: 'Gauge Control Detail',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/gauge-control/add',
-        //   name: 'Gauge Control Add',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/gauge-control/edit/:id',
-        //   name: 'Gauge Control Edit',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/calibration-item/:idGauge',
-        //   name: 'Calibration Item',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/calibration-item/add/:idGauge',
-        //   name: 'Calibration Item Add',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/calibration-item/edit/:id',
-        //   name: 'Calibration Item Edit',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/monthly-planning',
-        //   name: 'Monthly Planning',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/daily-management',
-        //   name: 'Daily Management',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/monthly-planning-holiday',
-        //   name: 'Monthly Planning Holiday',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/monthly-planning-holiday/add',
-        //   name: 'Monthly Planning Holiday Add',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/monthly-planning-holiday/edit/:id',
-        //   name: 'Monthly Planning Holiday Edit',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/custom-planning',
-        //   name: 'Custom Planning',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/custom-planning/add',
-        //   name: 'Custom Planning',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // },
-        // {
-        //   component: 'CNavItem',
-        //   to: '/qdc/custom-planning/edit/:id',
-        //   name: 'Custom Planning',
-        //   icon: '',
-        //   parentId: 'ROOT',
-        // }
-
-        /*define other in here*/
+        {
+          component: 'CNavItem',
+          name: 'Graphic Report',
+          to: '/app/report',
+          icon: 'cilChart',
+          parentId: 'ROOT',
+        }
       ],
     }
   },

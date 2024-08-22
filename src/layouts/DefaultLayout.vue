@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="body flex-grow-1 px-3">
-      <CContainer lg>
+      <CContainer>
         <router-view />
       </CContainer>
     </div>

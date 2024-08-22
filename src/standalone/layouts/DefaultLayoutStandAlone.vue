@@ -3,10 +3,10 @@
     <AppSidebar />
     <div class="wrapper d-flex flex-column min-vh-100 bg-blurred">
       <AppHeader />
-      <div class="body flex-grow-1 px-3">
-        <CContainer lg>
+      <div class="body flex-grow-1 px-5">
+       
           <router-view />
-        </CContainer>
+       
       </div>
       <AppFooter />
     </div>

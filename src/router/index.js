@@ -23,26 +23,26 @@ const routes = [
       {
         path: '/app/dashboard',
         name: 'Dashboard',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import('@/views/Dashboard.vue'),
       },
-
-      // URL
-      // {
-      //   path: '/qdc/quality-operational',
-      //   name: 'Quality Operational',
-      //   component: () => import('@/views/qdc/QualityOperational.vue'),
-      // },
-
-/*define other in here*/
+    ],
+  },
+  {
+    path: '/app/report',
+    name: 'PageReport',
+    component: DefaultLayoutStandAlone,
+    children: [
+      {
+        path: '',
+        name: 'Report',
+        component: () => import('@/views/Report.vue'),
+      },
     ],
   },
   {
     path: '/404',
     name: 'Page404',
-    component: () => import('@/views/pages/Page404'),
+    component: () => import('@/views/pages/Page404')
   },
   {
     path: '/500',
