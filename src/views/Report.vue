@@ -63,9 +63,10 @@ export default {
     async fetchData() {
       try {
         this.loaded = false;
+        console.log(localStorage)
         const response = await axios.get('http://localhost:3001/renbo/api/v1.0/nutrunner/number', {
           headers: {
-            'x-access-token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ0c2FocmlsQGdtYWlsLmNvbSIsImlkIjoxLCJyb2xlIjoxLCJjbGllbnRfaWQiOjEsImlhdCI6MTcyNDI4NDgzOSwiZXhwIjoxNzI0MzcxMjM5fQ.uxxC4sUAxXaHnokx7OzOekEt6j9ejeWbopjU9gCFnBM'
+            'x-access-token': localStorage.getItem('token')
           },
           params: {
             machine_no: this.machineNo,

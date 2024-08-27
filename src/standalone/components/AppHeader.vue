@@ -41,5 +41,12 @@ export default {
       logo,
     }
   },
+  logout() {
+      // Remove the token from localStorage
+      localStorage.removeItem('token');
+      
+      // Redirect the user to the login page
+      this.$router.push('/login');
+    }
 }
 </script>

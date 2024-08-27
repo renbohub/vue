@@ -46,9 +46,12 @@ export default {
     }
   },
   methods:{
-    logout(){      
-      localStorage.id_token = '';
-      window.location.href=process.env.VUE_APP_CONTAINER_URL+'/';
+    logout() {
+      // Remove the token from localStorage
+      localStorage.removeItem('token');
+      
+      // Redirect the user to the login page
+      this.$router.push('/login');
     }
   }
 }
