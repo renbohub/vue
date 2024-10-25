@@ -45,7 +45,7 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await axios.post('http://localhost:3001/renbo/api/v1.0/login', {
+        const response = await axios.post('http://renbo.id:3001/renbo/api/v1.0/login', {
           username: this.username,
           password: this.password
         });

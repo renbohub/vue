@@ -149,7 +149,7 @@ export default {
       try {
         this.loaded = false;
         console.log(localStorage)
-        const response = await axios.get('http://localhost:3001/renbo/api/v1.0/nutrunner/number', {
+        const response = await axios.get('http://renbo.id:3001/renbo/api/v1.0/nutrunner/number', {
           headers: {
             'x-access-token': localStorage.getItem('token')
           },
@@ -241,7 +241,7 @@ export default {
       try {
         this.loaded = false;
         console.log(localStorage)
-        const response = await axios.get('http://localhost:3001/renbo/api/v1.0/nutrunner/time', {
+        const response = await axios.get('http://renbo.id:3001/renbo/api/v1.0/nutrunner/time', {
           headers: {
             'x-access-token': localStorage.getItem('token')
           },
