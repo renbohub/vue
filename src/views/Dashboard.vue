@@ -351,7 +351,7 @@ export default {
   },
   data() {
     return {
-      brokerUrl: 'ws://portal-iot.com:9001/mqtt', // Example broker URL
+      brokerUrl: 'wss://renbo.id:8084/mqtt', // Example broker URL
       client: null,
       client1: null,
       client2: null,
@@ -561,18 +561,18 @@ export default {
           this.loaded = false;
           const data1 = JSON.parse(message.toString());
           const data = data1.chart
-          this.engine1 = data[0].engine_no;
-          this.model1 = data[0].model;
-          this.OK1 = data1.nut_runner[0].total_ok
-          this.NG1 = data1.nut_runner[0].total_ng
-          this.RFID1 = data1.engine
+          this.engine1 = data1.nut_runner.engine_no;
+          this.model1 = data1.nut_runner.model;
+          this.OK1 = data1.nut_runner.total_ok
+          this.NG1 = data1.nut_runner.total_ng
+          this.RFID1 = data1.nut_runner.engine
           this.default1Data = {
 
             labels: ['Total Ok', 'Total NG'],
             datasets: [
               {
                 backgroundColor: ['#41B883', '#E46651'],
-                data: [data1.nut_runner[0].total_ok, data1.nut_runner[0].total_ng],
+                data: [data1.nut_runner.total_ok, data1.nut_runner.total_ng],
               },
             ],
           };
@@ -711,18 +711,18 @@ export default {
           this.loaded1 = false;
           var data1 = JSON.parse(message1.toString());
           const data = data1.chart
-          this.engine2 = data[0].engine_no;
-          this.model2 = data[0].model;
-          this.OK2 = data1.nut_runner[0].total_ok
-          this.NG2 = data1.nut_runner[0].total_ng
-          this.RFID2 = data1.engine
+          this.engine2 = data1.nut_runner.engine_no;
+          this.model2 = data1.nut_runner.model;
+          this.OK2 = data1.nut_runner.total_ok
+          this.NG2 = data1.nut_runner.total_ng
+          this.RFID2 = data1.nut_runner.engine
           this.default2Data = {
 
             labels: ['Total Ok', 'Total NG'],
             datasets: [
               {
                 backgroundColor: ['#41B883', '#E46651'],
-                data: [data1.nut_runner[0].total_ok, data1.nut_runner[0].total_ng],
+                data: [data1.nut_runner.total_ok, data1.nut_runner.total_ng],
               },
             ],
           };
@@ -861,18 +861,18 @@ export default {
           this.loaded2 = false;
           const data1 = JSON.parse(message2.toString());
           const data = data1.chart
-          this.engine3 = data[0].engine_no;
-          this.model3 = data[0].model;
-          this.OK3 = data1.nut_runner[0].total_ok
-          this.NG3 = data1.nut_runner[0].total_ng
-          this.RFID3 = data1.engine
+          this.engine3 = data1.nut_runner.engine_no;
+          this.model3 = data1.nut_runner.model;
+          this.OK3 = data1.nut_runner.total_ok
+          this.NG3 = data1.nut_runner.total_ng
+          this.RFID3 = data1.nut_runner.engine
           this.default3Data = {
 
             labels: ['Total Ok', 'Total NG'],
             datasets: [
               {
                 backgroundColor: ['#41B883', '#E46651'],
-                data: [data1.nut_runner[0].total_ok, data1.nut_runner[0].total_ng],
+                data: [data1.nut_runner.total_ok, data1.nut_runner.total_ng],
               },
             ],
           };
